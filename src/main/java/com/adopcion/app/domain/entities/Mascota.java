@@ -1,4 +1,4 @@
-package com.adopcion.app.entities;
+package com.adopcion.app.domain.entities;
 
 import lombok.Data;
 import lombok.Getter;
