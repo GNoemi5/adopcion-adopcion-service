@@ -11,15 +11,15 @@ import java.util.List;
 public class MascotaServiceImpl implements MascotaService {
 
     @Autowired
-    private MascotaRepositoryImpl MascotaRepository;
+    private MascotaRepositoryImpl mascotaRepository;
     @Override
     public List<Mascota> listar() {
 
-        return null;
+        return mascotaRepository.listar();
     }
 
     @Override
     public void registrarMascota(Mascota mascota) {
-        
+        mascotaRepository.registrar(mascota);
     }
 }
