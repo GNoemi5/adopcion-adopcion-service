@@ -7,7 +7,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.util.Date;
 @Entity
-@Table(name="cuenta")
+@Table(name="persona")
 @Getter
 @Setter
 public class Cuenta {
