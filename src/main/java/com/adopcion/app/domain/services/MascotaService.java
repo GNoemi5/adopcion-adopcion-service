@@ -7,4 +7,6 @@ import java.util.List;
 public interface MascotaService {
 
     public List<Mascota> listar();
+
+    void registrarMascota(Mascota mascota);
 }
