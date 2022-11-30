@@ -1,25 +1,24 @@
-package com.adopcion.app.domain.entities;
+package com.adopcion.app.domain.usuario.entities;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Date;
+
 @Entity
-@Table(name="usuario")
+@Table(name = "usuario")
 @Getter
 @Setter
-public class Cuenta {
+public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "idCuenta")
+    @Column(name = "idCuenta")
     private Integer id;
 
-    @Column (name="correo")
+    @Column(name = "correo")
     private String correo;
 
-    @Column (name = "password")
+    @Column(name = "password")
     private String password;
 }

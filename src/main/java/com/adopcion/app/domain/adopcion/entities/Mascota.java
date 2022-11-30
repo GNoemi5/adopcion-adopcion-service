@@ -1,6 +1,5 @@
-package com.adopcion.app.domain.entities;
+package com.adopcion.app.domain.adopcion.entities;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -31,12 +30,14 @@ public class Mascota {
     @Column(name="weight")
     private Double peso;
 
-    @Column(name="type")
-    private String tipoAnimal;
+    @ManyToOne(fetch = FetchType.LAZY)
+    private TipoMascota tipoMascota;
 
     @Column(name="health")
     private String salud;
 
+    @Column(name="state")
+    private Boolean estado;
 
 
 }

@@ -1,6 +1,6 @@
-package com.adopcion.app.domain.repositories;
+package com.adopcion.app.domain.adopcion.repositories;
 
-import com.adopcion.app.domain.entities.Mascota;
+import com.adopcion.app.domain.adopcion.entities.Mascota;
 
 import java.util.List;
 

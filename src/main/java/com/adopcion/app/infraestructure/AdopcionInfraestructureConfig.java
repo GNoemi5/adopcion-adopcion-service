@@ -1,12 +1,17 @@
 package com.adopcion.app.infraestructure;
 
-import com.adopcion.app.domain.entities.Mascota;
-import org.hibernate.cfg.Environment;
+import com.adopcion.app.domain.adopcion.entities.Mascota;
+import lombok.extern.log4j.Log4j;
+import lombok.extern.log4j.Log4j2;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -17,9 +22,9 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import javax.sql.DataSource;
 import java.util.Properties;
 @Configuration
-@ComponentScan
+@ComponentScan("com.adopcion.app.domain")
 @PropertySource("classpath:application.properties")
-@EnableJpaRepositories("com.adopcion.app.infraestructure.repositories")
+@EnableJpaRepositories("com.adopcion.app.infraestructure.*")
 public class AdopcionInfraestructureConfig {
     @Autowired
     private Environment env;
@@ -31,9 +36,7 @@ public class AdopcionInfraestructureConfig {
         dataSource.setUrl(env.getProperty("db.url"));
         dataSource.setUsername(env.getProperty("db.username"));
         dataSource.setPassword(env.getProperty("db.password"));
-        System.out.print(env.getProperty("db.username"));
-        System.out.print(env.getProperty("db.password"));
-        System.out.print(env.getProperty("db.url"));
+
         return dataSource;
     }
 

@@ -1,6 +1,6 @@
-package com.adopcion.app.domain.repositories;
+package com.adopcion.app.domain.donacion.repositories;
 
-import com.adopcion.app.domain.entities.Donacion;
+import com.adopcion.app.domain.donacion.entities.Donacion;
 
 import java.util.List;
 
