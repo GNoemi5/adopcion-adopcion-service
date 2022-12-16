@@ -45,6 +45,8 @@ public class MascotaRepositoryImpl implements MascotaRepository {
         mascotaDb.setPeso(mascota.getPeso());
         mascotaDb.setTamaño(mascota.getTamaño());
         mascotaDb.setFechaNacimiento(mascota.getFechaNacimiento());
+        mascotaDb.setFoto(mascota.getFoto());
+        mascotaDb.setDescripcion(mascota.getDescripcion());
         mascotaJpaRepository.save(mascotaDb);
         return mascotaDb;
 

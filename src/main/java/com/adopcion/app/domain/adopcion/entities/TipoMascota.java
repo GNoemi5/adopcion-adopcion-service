@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import javax.persistence.*;
 
 @Entity
-@Table
+@Table(name="tipomascota")
 @Getter
 @Setter
 public class TipoMascota {
