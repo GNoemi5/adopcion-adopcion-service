@@ -16,7 +16,7 @@ public class MascotaServiceImpl implements MascotaService {
     @Override
     public List<Mascota> listar() {
 
-        return mascotaRepository.listar().stream().filter(m->m.getEstado()).collect(Collectors.toList());
+        return mascotaRepository.listar();
     }
 
     @Override
@@ -38,6 +38,12 @@ public class MascotaServiceImpl implements MascotaService {
     @Override
     public Mascota editar(Mascota mascota) {
         return mascotaRepository.actualizar(mascota);
+    }
+
+    @Override
+    public List<Mascota> listarMascotasDisponibles() {
+
+        return mascotaRepository.listar().stream().filter(m->m.getEstado()).collect(Collectors.toList());
     }
 
 

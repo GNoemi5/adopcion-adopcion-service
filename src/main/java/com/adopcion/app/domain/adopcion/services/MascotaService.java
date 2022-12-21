@@ -15,4 +15,6 @@ public interface MascotaService {
     void eliminar(Integer idMascota);
 
     Mascota editar(Mascota mascota);
+
+    List<Mascota> listarMascotasDisponibles();
 }

@@ -2,7 +2,6 @@ package com.adopcion.app.infraestructure.adopcion;
 
 import com.adopcion.app.domain.adopcion.entities.Mascota;
 import com.adopcion.app.domain.adopcion.repositories.MascotaRepository;
-import com.adopcion.app.infraestructure.adopcion.MascotaJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -42,8 +41,6 @@ public class MascotaRepositoryImpl implements MascotaRepository {
         mascotaDb.setNombre(mascota.getNombre());
         mascotaDb.setRaza(mascota.getRaza());
         mascotaDb.setTipoMascota(mascota.getTipoMascota());
-        mascotaDb.setPeso(mascota.getPeso());
-        mascotaDb.setTamaño(mascota.getTamaño());
         mascotaDb.setFechaNacimiento(mascota.getFechaNacimiento());
         mascotaDb.setFoto(mascota.getFoto());
         mascotaDb.setDescripcion(mascota.getDescripcion());

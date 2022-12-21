@@ -12,19 +12,14 @@ public class Adopcion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name="nombreMascota")
-    private String nombreMascota;
+    @ManyToOne
+    @JoinColumn(name = "mascota_id_mascota")
+    private Mascota mascota;
 
     @Column(name="nombreUsuario")
     private String nombreUsuario;
 
-
-    @Column(name="tipoMascota")
-    private String tipoMascota;
-
     @Column(name="fechaAdopcion")
     private Date fechaAdopcion;
-
-
 
 }

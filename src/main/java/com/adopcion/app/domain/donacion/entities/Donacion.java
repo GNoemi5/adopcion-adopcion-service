@@ -1,6 +1,5 @@
 package com.adopcion.app.domain.donacion.entities;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
